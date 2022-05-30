@@ -1,5 +1,3 @@
-import math
-
 entrada = [int(i) for i in input().split()]
 
 distancia = entrada[0]
@@ -9,39 +7,23 @@ num_postos = entrada[3]
 preco_gasolina =  entrada[4]
 
 
-litros_necessarios = distancia/10
-litros_faltantes = litros_necessarios - capacidade_litros
-if litros_faltantes < 0:
-    litros_faltantes = 0
-gastos = litros_faltantes*preco_gasolina + capacidade_litros*preco_gasolina
-
 distancia_inicial_percorrivel = capacidade_litros*10
-if distancia == 0:
+
+if distancia_inicial_percorrivel >= distancia:
     print("Pode viajar.")
-    print("R$:", int(gastos))
-        
-elif capacidade_litros == 0:
-    print("Nao pode viajar.")
-    
-elif (num_postos == 0):
-    if distancia_inicial_percorrivel <= distancia:
-        print("Pode viajar.")
-        print("R$:", int(gastos))
-    else:
-        print("Nao pode viajar.")
-    
-elif gastos > reais:
-    print("Nao pode viajar.")
+    print("R$: %.0f" % (reais))
 
 else:
-    distancia_postos = distancia/num_postos
+    litros_necessarios = distancia/10 #200/10 = 20
+    litros_faltantes = litros_necessarios - capacidade_litros
+    if litros_faltantes < 0:
+        litros_faltantes = 0
+    gastos = litros_faltantes*preco_gasolina
+    distancia_postos = distancia//(num_postos+1)
 
-    paradasNecessarias = math.ceil(litros_faltantes/capacidade_litros)
-    num_postos -= (distancia_inicial_percorrivel//distancia_postos)
-
-    if num_postos < paradasNecessarias:
-        print("Nao pode viajar.")
+    if (gastos <= reais) and (distancia_inicial_percorrivel >= distancia_postos):
+        print("Pode viajar.")
+        print("R$: %.0f" % (reais-gastos))
 
     else:
-        print("Pode viajar.")
-        print("R$:", int(gastos))
+        print("Nao pode viajar.")
