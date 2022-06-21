@@ -13,7 +13,7 @@ Consiste de 2 linhas
 
 2º linha: Dois valores numéricos, um para a distância percorrida e outro para o valor do quilômetro percorrido
 
-Formato de saída
+## Formato de saída
 
 O valor da corrida, com 2 casas decimais
 
