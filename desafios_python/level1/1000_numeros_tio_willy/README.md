@@ -3035,3 +3035,5 @@ N appeared K times
     46 appeared 7 times
     49 appeared 12 times
     31 appeared 10 times
+
+[Ver no TheHuxley](https://thehuxley.com/problem/2086?locale=pt_BR)
