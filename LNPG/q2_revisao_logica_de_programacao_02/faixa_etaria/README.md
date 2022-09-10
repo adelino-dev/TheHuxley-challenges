@@ -64,6 +64,8 @@ Faixa etária de acordo com a idade da entrada.
 
     Você é uma criança.
 
+-------------------------------
+
 ### Entrada
 
     7
@@ -72,3 +74,7 @@ Faixa etária de acordo com a idade da entrada.
 ### Saída
 
     Você é uma criança.
+
+-------------------------------
+
+[Ver no TheHuxley](https://thehuxley.com/problem/3861?quizId=7972)
